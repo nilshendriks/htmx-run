@@ -1,0 +1,48 @@
+{% extends 'layout.html' %} {% block content %}
+
+<form action="/runs" method="get" class="tool-bar">
+  <label for="search">Search Term</label>
+  <input
+    id="search"
+    type="search"
+    name="q"
+    value="{{ request.args.get('q') or '' }}"
+  />
+  <!-- <img -->
+  <!--   style="height: 20px" -->
+  <!--   id="spinner" -->
+  <!--   class="htmx-indicator" -->
+  <!--   src="/static/img/spinning-circles.svg" -->
+  <!-- /> -->
+  <input type="submit" value="Search" />
+</form>
+
+<table>
+  <thead>
+    <tr>
+        <th>ID</th>
+      <th>Distance</th>
+      <th>Duration</th>
+      <th>Timestamp</th>      
+      <th></th>
+    </tr>
+  </thead>
+  <tbody>
+    {% for run in runs %}
+    <tr>
+        <td>{{run.id}}</td>
+      <td>{{ run.distance }}</td>
+      <td>{{ run.duration }}</td>
+      <td>{{ run.timestamp }}</td>
+      <td>
+        <a href="/runs/{{ run.id }}/edit">Edit</a
+        ><a href="/runs/{{ run.id }}">View</a>
+      </td>
+    </tr>
+    {% endfor %}
+  </tbody>
+</table>
+
+<p><a href="/runs/new">Add a Run</a></p>
+
+{% endblock %}

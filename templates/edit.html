@@ -1,0 +1,61 @@
+{% extends 'layout.html' %} {% block content %}
+
+<form action="/runs/{{ run.id }}/edit" method="post">
+  <fieldset>
+    <legend>Run Values</legend>
+    <div class="table rows">
+      <p>
+        <label for="distance">Distance</label>
+        <input
+          name="distance"
+          id="distance"
+          type="text"
+          placeholder="Distance (e.g. 5.0)"
+          value="{{ run.distance }}"
+        />
+        <span class="error">{{ run.errors['distance'] }}</span>
+      </p>
+      <p>
+        <label for="duration">Duration</label>
+        <input
+          name="duration"
+          id="duration"
+          type="text"
+          placeholder="Duration (e.g. 30:00)"
+          value="{{ run.duration }}"
+        />
+        <span class="error">{{ run.errors['duration'] }}</span>
+      </p>
+      <p>
+        <label for="timestamp">Timestamp</label>
+        <input
+          name="timestamp"
+          id="timestamp"
+          type="datetime-local"
+          placeholder="Timestamp"
+          value="{{ run.timestamp }}"
+        />
+        <span class="error">{{ run.errors['timestamp'] }}</span>
+      </p>
+    </div>
+    <button>Save</button>
+  </fieldset>
+</form>
+
+<form action="/runs/{{ run.id }}/delete" method="post">
+  <button
+    id="delete-btn"
+    hx-delete="/runs/{{ run.id }}"
+    hx-push-url="true"
+    hx-confirm="Are you sure you want to delete this run?"
+    hx-target="body"
+  >
+    Delete Run
+  </button>
+</form>
+
+<p>
+  <a href="/runs">Back</a>
+</p>
+
+{% endblock %}

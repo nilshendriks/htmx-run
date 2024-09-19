@@ -1,0 +1,44 @@
+[
+  {
+    "id": 1,
+    "distance": "2.5",
+    "duration": "00:25:01",
+    "timestamp": "2024-09-08T16:17",
+    "errors": {}
+  },
+  {
+    "id": 2,
+    "distance": "2.5",
+    "duration": "00:21:04",
+    "timestamp": "2024-09-16T20:58",
+    "errors": {}
+  },
+  {
+    "id": 3,
+    "distance": "2.5",
+    "duration": "00:21:20",
+    "timestamp": "2024-09-14T16:57",
+    "errors": {}
+  },
+  {
+    "id": 4,
+    "distance": "2.12",
+    "duration": "00:20:00",
+    "timestamp": "2024-08-20T21:43",
+    "errors": {}
+  },
+  {
+    "id": 5,
+    "distance": "2.13",
+    "duration": "00:20:01",
+    "timestamp": "2024-08-14T22:02",
+    "errors": {}
+  },
+  {
+    "id": 6,
+    "distance": "2.98",
+    "duration": "00:30:36",
+    "timestamp": "2024-08-12T19:34",
+    "errors": {}
+  }
+]

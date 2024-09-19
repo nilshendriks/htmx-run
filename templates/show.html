@@ -1,0 +1,17 @@
+{% extends 'layout.html' %} {% block content %}
+
+<h1>Run Details</h1>
+
+<div>
+    <div>ID: {{ run.id }}</div>
+    <div>Distance: {{ run.distance }} km</div>
+    <div>Duration: {{ run.duration }} min</div>
+    <div>Timestamp: {{ run.timestamp }}</div>
+</div>
+
+<p>
+    <a href="/runs/{{ run.id }}/edit">Edit</a>
+    <a href="/runs">Back</a>
+</p>
+
+{% endblock %}

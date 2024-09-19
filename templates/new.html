@@ -1,0 +1,48 @@
+{% extends 'layout.html' %} {% block content %}
+
+<form action="/runs/new" method="post">
+  <fieldset>
+    <legend>Run Values</legend>
+    <div class="table rows">
+        <p>
+            <label for="distance">Distance</label>
+            <input
+                name="distance"
+                id="distance"
+                type="text"
+                placeholder="Distance (e.g., 5.0)"
+                value="{{ run.distance or '' }}"
+            />
+            <span class="error">{{ run.errors['distance'] }}</span>
+        </p>
+        <p>
+            <label for="duration">Duration</label>
+            <input
+                name="duration"
+                id="duration"
+                type="text"
+                placeholder="Duration (e.g., 30:00)"
+                value="{{ run.duration or '' }}"
+            />
+            <span class="error">{{ run.errors['duration'] }}</span>
+        </p>
+        <p>
+            <label for="timestamp">Timestamp</label>
+            <input
+                name="timestamp"
+                id="timestamp"
+                type="datetime-local"
+                value="{{ run.timestamp or '' }}"
+            />
+            <span class="error">{{ run.errors['timestamp'] }}</span>
+        </p>
+    </div>
+    <button>Save</button>
+  </fieldset>
+</form>
+
+<p>
+  <a href="/runs">Back</a>
+</p>
+
+{% endblock %}
