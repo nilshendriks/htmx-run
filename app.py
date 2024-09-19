@@ -96,7 +96,7 @@ def runs_edit_post(run_id=0):
     else:
         flash("Run not found.")
         return redirect("/runs")
-        
+
 
 @app.route("/runs/<run_id>/delete", methods=["POST"])
 def runs_delete(run_id=0):
@@ -116,4 +116,10 @@ def not_found(e):
 
 
 if __name__ == '__main__':
-    app.run(debug=True)
+    # app.jinja_env.auto_reload = True
+    # app.config['TEMPLATES_AUTO_RELOAD'] = True
+    # app.run(debug=True, host='0.0.0.0')
+    # app.config['ENV'] = 'development'
+    # app.run(debug=True)
+    app.config['TEMPLATES_AUTO_RELOAD'] = True
+    app.run(debug=True, host='0.0.0.0')

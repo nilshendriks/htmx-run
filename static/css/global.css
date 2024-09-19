@@ -1,0 +1,109 @@
+:root {
+    color-scheme: light dark;
+
+    --bg-color: #ffffff;
+    --text-color: #000000;
+
+    --color-ui-background-transparent: rgba(255, 255, 255, 0.1);
+    --color-ui-background-primary: #007bff;
+    --color-ui-background-active: #f0f0f0;
+    --color-ui-background-light: #ddd;
+    --color-ui-border-lighter: #eee;
+    --color-ui-background-dark: #000;
+
+    --color-ui-text-default: #000;
+    --color-ui-text-active: yellow;
+    --color-ui-text-primary: #000;
+    --color-ui-text-light: #fff;
+    --color-ui-text-on-dark: #fff;
+    --color-ui-text-dark: #000;
+    --color-ui-text-disabled: #ccc;
+    --color-ui-text-on-primary: #fff;
+
+    --font-family-text-body: -apple-system, BlinkMacSystemFont, "Segoe UI",
+        Roboto, "Helvetica Neue", Arial, sans-serif;
+
+    --color-ui-border-default: #000;
+    --color-ui-border-primary: #007bff;
+    --color-ui-border-disabled: #ccc;
+    --color-ui-border-lighter: #eee;
+    --color-ui-border-dark: #000;
+    --color-ui-border-darker: #ddd;
+}
+
+/* Global styles */
+* {
+    box-sizing: border-box;
+}
+
+html {
+}
+
+html,
+body {
+    height: 100%;
+}
+
+/* Global dark mode styles */
+@media (prefers-color-scheme: dark) {
+    :root {
+        --bg-color: #121212;
+        --text-color: #e0e0e0;
+    }
+}
+
+body {
+    background-color: var(--bg-color);
+    color: var(--text-color);
+    font-family: var(--font-family-text-body);
+    margin: 0;
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: auto 1fr auto;
+    gap: 1em;
+    padding: 1em;
+}
+
+header,
+main,
+footer {
+    border: 1px solid #000;
+    border-radius: 8px;
+    width: 100%;
+}
+
+header {
+    display: grid;
+    grid-template-columns: 1fr;
+    place-content: center;
+    text-align: center;
+    padding: 1em;
+}
+
+header * {
+    margin: 0;
+}
+
+main {
+    /* width: 100%; */
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: auto 1fr auto;
+    align-items: start;
+    gap: 1em;
+    padding: 1em;
+}
+
+footer {
+    text-align: center;
+}
+
+/* Tables */
+th {
+    text-align: left;
+}
+
+th:last-child {
+    width: 25%;
+    min-width: 170px;
+}

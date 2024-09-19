@@ -1,0 +1,28 @@
+.button-group__container {
+    container: bg-container / inline-size;
+}
+
+.button-group {
+    background-color: whitesmoke;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    display: flex;
+    gap: 24px;
+    padding: 24px;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+.button-group .button {
+    flex: 1 1 auto;
+}
+
+@container (min-width: 640px) {
+    .button-group {
+        justify-content: flex-end;
+    }
+
+    .button-group .button {
+        flex: unset;
+    }
+}

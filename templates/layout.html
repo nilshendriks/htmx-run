@@ -1,12 +1,21 @@
 <!doctype html>
 <html lang="en">
     <head>
-        <title>Runs App</title>
-        <!-- <link -->
-        <!--   rel="stylesheet" -->
-        <!--   href="https://the.missing.style/v0.2.0/missing.min.css" -->
-        <!-- /> -->
-        <!-- <link rel="stylesheet" href="/static/site.css" /> -->
+        <meta charset="UTF-8" />
+        <meta
+            name="viewport"
+            content="width=device-width, initial-scale=1, viewport-fit=cover"
+        />
+        <meta
+            name="description"
+            content="RunTrackr helps you log and track your running progress, distance, and time. Stay motivated and monitor your performance."
+        />
+
+        <title>Track Your Runs - RunTrackr</title>
+        <link rel="stylesheet" href="/static/css/global.css" />
+        <link rel="stylesheet" href="/static/css/button.css" />
+        <link rel="stylesheet" href="/static/css/button-group.css" />
+
         <!-- <script src="/static/js/htmx-1.8.0.js"></script> -->
         <!-- <script src="/static/js/_hyperscript-0.9.7.js"></script> -->
         <!-- <script src="/static/js/rsjs-menu.js" type="module"></script> -->
@@ -14,8 +23,8 @@
     </head>
     <body xhx-boost="true">
         <header>
-            <h1>Runs App</h1>
-            <h2>A Demo Runs Application</h2>
+            <h1>RunTrackr</h1>
+            <h2>Track your runs!</h2>
         </header>
         <main>
             {% for message in get_flashed_messages() %}
